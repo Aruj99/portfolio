@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Name — Wedding, Pre-Wedding &amp; Event Photography in Your City</title>
+<meta name="description" content="Studio Name is a photography studio in Your City specialising in weddings, pre-wedding shoots, events and portraits. View the portfolio and enquire on WhatsApp.">
+<meta name="theme-color" content="#14120f">
+<meta property="og:title" content="Studio Name — Photography Studio">
+<meta property="og:description" content="Wedding, pre-wedding, event and portrait photography. View the portfolio and enquire on WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314120f'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23c2a37e' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================
+   CUSTOMISE: colours, fonts and spacing live here
+   ===================================================== */
+:root{
+  --ink:#14120f;
+  --ink-soft:#4a453f;
+  --paper:#f6f3ee;
+  --paper-2:#ece7df;
+  --line:rgba(20,18,15,.14);
+  --accent:#a8865f;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --pad:clamp(1.25rem,5vw,4.5rem);
+  --section:clamp(5rem,12vw,10rem);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:1rem;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;margin:0;letter-spacing:-.01em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.75rem 1rem;z-index:200}
+.skip:focus{left:0}
+.wrap{padding-inline:var(--pad);max-width:1440px;margin-inline:auto}
+.eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:1.25rem;display:block}
+.h2{font-size:clamp(2.2rem,5.2vw,4rem)}
+.h2 em{font-style:italic;color:var(--accent)}
+section{padding-block:var(--section)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem 1.9rem;font:500 .74rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:1px solid currentColor;background:transparent;cursor:pointer;transition:background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease)}
+.btn-solid{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn-solid:hover{background:transparent;color:var(--paper)}
+.btn-ghost{color:var(--paper)}
+.btn-ghost:hover{background:var(--paper);color:var(--ink)}
+.btn-dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-dark:hover{background:transparent;color:var(--ink)}
+.btn svg{width:1.1em;height:1.1em;fill:currentColor}
+
+/* Navbar */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;color:var(--paper);transition:background .5s var(--ease),color .5s var(--ease),box-shadow .5s var(--ease)}
+.nav.scrolled{background:rgba(246,243,238,.97);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--serif);font-size:1.5rem;font-weight:500;letter-spacing:.04em;text-decoration:none}
+.menu{display:flex;gap:2.4rem;list-style:none;margin:0;padding:0}
+.menu a{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;font-weight:400;position:relative;padding:.4rem 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.menu a:hover::after{transform:scaleX(1)}
+.burger{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:10px;right:10px;height:1.5px;background:currentColor;transition:transform .4s var(--ease),opacity .3s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:var(--paper);background:#1b1814;padding:0;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;animation:drift 22s ease-out forwards}
+@keyframes drift{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,7,.78) 0%,rgba(10,9,7,.25) 45%,rgba(10,9,7,.35) 100%)}
+.hero-in{position:relative;z-index:2;width:100%;padding-block:0 clamp(3.5rem,9vw,7rem)}
+.hero h1{font-size:clamp(3rem,10vw,8rem);max-width:12ch;font-weight:400}
+.hero h1 em{font-style:italic;color:#d9c3a3}
+.hero p.lead{max-width:34rem;margin-top:1.5rem;font-size:clamp(1rem,1.6vw,1.15rem);color:rgba(246,243,238,.86)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.25rem}
+.scroll-cue{position:absolute;right:var(--pad);bottom:clamp(3.5rem,9vw,7rem);z-index:2;writing-mode:vertical-rl;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(246,243,238,.7);display:flex;align-items:center;gap:1rem}
+.scroll-cue::after{content:"";width:1px;height:60px;background:rgba(246,243,238,.5);animation:cue 2.4s ease-in-out infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* Work */
+.work-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1.5rem;margin-bottom:clamp(2.5rem,6vw,4.5rem)}
+.work-head p{max-width:26rem;color:var(--ink-soft)}
+.gallery{column-count:1;column-gap:clamp(.75rem,1.6vw,1.5rem)}
+@media(min-width:600px){.gallery{column-count:2}}
+@media(min-width:1000px){.gallery{column-count:3}}
+.shot{break-inside:avoid;margin:0 0 clamp(.75rem,1.6vw,1.5rem);position:relative;overflow:hidden;background:var(--paper-2);cursor:zoom-in;display:block;width:100%;padding:0;border:0;text-align:left;font:inherit;color:inherit}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.shot:hover img{transform:scale(1.045)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;padding:2.5rem 1.1rem 1rem;color:#fff;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;background:linear-gradient(to top,rgba(10,9,7,.6),transparent);opacity:0;transform:translateY(8px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.shot:hover .cap,.shot:focus-visible .cap{opacity:1;transform:none}
+@media(hover:none){.shot .cap{opacity:1;transform:none}}
+.r-45{aspect-ratio:4/5}.r-32{aspect-ratio:3/2}.r-23{aspect-ratio:2/3}.r-11{aspect-ratio:1/1}.r-34{aspect-ratio:3/4}
+.shot.failed img{display:none}
+.shot.failed::before{content:"Photo placeholder";position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-style:italic;color:var(--ink-soft);font-size:1.2rem}
+
+/* Lightbox */
+dialog.lb{border:0;padding:0;background:rgba(10,9,7,.96);width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;color:#fff}
+dialog.lb::backdrop{background:rgba(10,9,7,.96)}
+.lb-in{height:100%;display:grid;place-items:center;padding:clamp(3.5rem,6vw,5rem) clamp(1rem,6vw,5rem)}
+.lb img{max-height:100%;max-width:100%;object-fit:contain}
+.lb-btn{position:absolute;background:none;border:0;color:#fff;cursor:pointer;width:48px;height:48px;font-size:1.6rem;line-height:1;opacity:.8;transition:opacity .3s}
+.lb-btn:hover{opacity:1}
+.lb-x{top:.75rem;right:.75rem}.lb-p{left:.25rem;top:50%;translate:0 -50%}.lb-n{right:.25rem;top:50%;translate:0 -50%}
+.lb-cap{position:absolute;left:0;right:0;bottom:1rem;text-align:center;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;opacity:.7}
+
+/* Services */
+.services{background:var(--ink);color:var(--paper)}
+.services .eyebrow{color:#c2a37e}
+.svc-list{margin-top:clamp(2.5rem,6vw,4.5rem);border-top:1px solid rgba(246,243,238,.18)}
+.svc{display:grid;grid-template-columns:3rem 1fr;gap:.25rem 1rem;padding:clamp(1.75rem,3.5vw,2.75rem) 0;border-bottom:1px solid rgba(246,243,238,.18);transition:padding-left .5s var(--ease)}
+.svc:hover{padding-left:.75rem}
+.svc .n{font-family:var(--serif);font-style:italic;color:#c2a37e;font-size:1.1rem;padding-top:.4rem}
+.svc h3{font-size:clamp(1.7rem,3.6vw,2.7rem)}
+.svc p{grid-column:2;color:rgba(246,243,238,.7);max-width:38rem;margin-top:.5rem}
+@media(min-width:900px){
+  .svc{grid-template-columns:4rem 1fr 1fr;align-items:baseline;gap:0 2rem}
+  .svc p{grid-column:3;margin-top:0}
+}
+
+/* About */
+.about-grid{display:grid;gap:clamp(2rem,6vw,6rem);align-items:center}
+@media(min-width:900px){.about-grid{grid-template-columns:1fr 1.05fr}}
+.about-img{aspect-ratio:4/5;background:var(--paper-2);overflow:hidden;position:relative}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-copy p{color:var(--ink-soft);margin-top:1.25rem;max-width:34rem}
+.note{display:inline-block;margin-top:1.5rem;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+
+/* Why */
+.why{background:var(--paper-2)}
+.why-grid{display:grid;gap:2.5rem 3rem;margin-top:clamp(2.5rem,6vw,4rem);grid-template-columns:1fr}
+@media(min-width:640px){.why-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why-item{border-top:1px solid var(--ink);padding-top:1.25rem}
+.why-item h3{font-size:1.6rem;margin-bottom:.6rem}
+.why-item p{color:var(--ink-soft);font-size:.95rem}
+
+/* Packages */
+.pk-grid{display:grid;gap:1.25rem;margin-top:clamp(2.5rem,6vw,4rem)}
+@media(min-width:900px){.pk-grid{grid-template-columns:repeat(3,1fr)}}
+.pk{border:1px solid var(--line);padding:clamp(1.75rem,3vw,2.75rem);display:flex;flex-direction:column;gap:1rem;background:var(--paper);transition:border-color .4s,transform .5s var(--ease)}
+.pk:hover{border-color:var(--ink);transform:translateY(-4px)}
+.pk h3{font-size:2rem}
+.pk ul{list-style:none;margin:0;padding:0;color:var(--ink-soft);font-size:.95rem}
+.pk li{padding:.55rem 0;border-bottom:1px solid var(--line)}
+.pk .price{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--accent);margin-top:auto;padding-top:1rem}
+.pk .btn{width:100%}
+
+/* Testimonials */
+.testi{padding-top:0}
+.testi-box{border:1px dashed rgba(20,18,15,.35);padding:clamp(2.5rem,6vw,5rem);text-align:center}
+.testi-box h2{font-size:clamp(1.8rem,3.6vw,2.8rem);margin-bottom:1rem}
+.testi-box p{max-width:36rem;margin-inline:auto;color:var(--ink-soft)}
+.tag{display:inline-block;border:1px solid var(--ink);padding:.35rem .8rem;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:1.5rem}
+
+/* Contact */
+.contact{background:var(--ink);color:var(--paper)}
+.contact .eyebrow{color:#c2a37e}
+.c-grid{display:grid;gap:3rem;margin-top:clamp(2rem,5vw,3.5rem)}
+@media(min-width:900px){.c-grid{grid-template-columns:1fr 1.1fr;gap:6rem}}
+.c-list{list-style:none;margin:2rem 0 0;padding:0}
+.c-list li{padding:1rem 0;border-bottom:1px solid rgba(246,243,238,.18);display:flex;gap:1.5rem;font-size:.95rem}
+.c-list span{width:6.5rem;flex:none;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#c2a37e;padding-top:.2rem}
+.c-list a{text-decoration:none;border-bottom:1px solid transparent}
+.c-list a:hover{border-color:currentColor}
+form{display:grid;gap:1.4rem}
+.f-row{display:grid;gap:1.4rem}
+@media(min-width:600px){.f-row{grid-template-columns:1fr 1fr}}
+label{display:block;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,243,238,.7);margin-bottom:.4rem}
+input,select,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(246,243,238,.35);color:var(--paper);font:300 1rem var(--sans);padding:.7rem 0;border-radius:0;transition:border-color .3s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:#c2a37e}
+select option{color:#14120f}
+textarea{resize:vertical;min-height:110px}
+input::placeholder,textarea::placeholder{color:rgba(246,243,238,.4)}
+.form-note{font-size:.82rem;color:rgba(246,243,238,.6)}
+.err{color:#e5b3a0;font-size:.82rem;min-height:1.2em}
+
+/* Footer */
+footer{background:#0d0c0a;color:rgba(246,243,238,.7);padding:clamp(3rem,6vw,5rem) 0 2rem;font-size:.9rem}
+.f-grid{display:grid;gap:2.5rem}
+@media(min-width:800px){.f-grid{grid-template-columns:1.4fr 1fr 1fr}}
+footer .logo{color:var(--paper);display:inline-block;margin-bottom:.75rem}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+footer h4{margin:0 0 1rem;font:500 .68rem var(--sans);letter-spacing:.24em;text-transform:uppercase;color:#c2a37e}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.legal{margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(246,243,238,.14);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem;font-size:.78rem}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+
+/* Mobile nav */
+@media(max-width:860px){
+  .burger{display:block}
+  .menu{position:fixed;inset:0;background:var(--ink);color:var(--paper);flex-direction:column;justify-content:center;align-items:center;gap:1.6rem;visibility:hidden;opacity:0;transition:opacity .4s var(--ease),visibility .4s}
+  .menu.open{visibility:visible;opacity:1}
+  .menu a{font-family:var(--serif);font-size:2.2rem;letter-spacing:0;text-transform:none}
+  .nav .logo,.nav .burger{position:relative;z-index:2}
+  body.menu-open .nav{color:var(--paper);background:transparent;box-shadow:none}
+  .scroll-cue{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body class="no-js">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#home" class="logo" data-brand>Studio Name</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <nav aria-label="Primary">
+      <ul class="menu" id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="home" aria-label="Introduction">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=75" alt="A couple sharing a quiet moment on their wedding day" fetchpriority="high">
+  <div class="wrap hero-in">
+    <h1>Stories worth <em>remembering.</em></h1>
+    <p class="lead">Wedding, pre-wedding, event and portrait photography in <span data-city>Your City</span> — natural, personal and beautifully edited.</p>
+    <div class="hero-cta">
+      <a class="btn btn-solid" href="#portfolio">View Portfolio</a>
+      <a class="btn btn-ghost" data-wa href="https://wa.me/910000000000" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+    </div>
+  </div>
+  <span class="scroll-cue" aria-hidden="true">Scroll</span>
+</section>
+
+<!-- FEATURED WORK -->
+<section id="portfolio" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="work-head">
+      <div class="rv">
+        <span class="eyebrow">Featured Work</span>
+        <h2 class="h2" id="work-h">A curated look at <em>the work.</em></h2>
+      </div>
+      <p class="rv">Placeholder images shown for this concept demo. Replace with the photographer's own best frames.</p>
+    </div>
+
+    <div class="gallery" id="gallery">
+      <button class="shot r-45 rv" type="button" data-cat="Wedding"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=75" alt="Bride and groom walking together"><span class="cap">Wedding</span></button>
+      <button class="shot r-32 rv" type="button" data-cat="Pre-Wedding"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=900&q=75" alt="Couple in a pre-wedding portrait outdoors"><span class="cap">Pre-Wedding</span></button>
+      <button class="shot r-23 rv" type="button" data-cat="Portrait"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=75" alt="Studio-style portrait of a woman"><span class="cap">Portrait</span></button>
+      <button class="shot r-11 rv" type="button" data-cat="Wedding"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=900&q=75" alt="Wedding details and ceremony moment"><span class="cap">Wedding</span></button>
+      <button class="shot r-34 rv" type="button" data-cat="Event"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=75" alt="Guests celebrating at an event"><span class="cap">Event</span></button>
+      <button class="shot r-32 rv" type="button" data-cat="Couple"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=900&q=75" alt="Couple embracing in soft light"><span class="cap">Couple</span></button>
+      <button class="shot r-45 rv" type="button" data-cat="Portrait"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=75" alt="Portrait of a man looking toward the camera"><span class="cap">Portrait</span></button>
+      <button class="shot r-23 rv" type="button" data-cat="Wedding"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=900&q=75" alt="Bride in a quiet candid moment"><span class="cap">Wedding</span></button>
+      <button class="shot r-11 rv" type="button" data-cat="Pre-Wedding"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=75" alt="Pre-wedding shoot with a couple at golden hour"><span class="cap">Pre-Wedding</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <span class="eyebrow rv">Services</span>
+    <h2 class="h2 rv" id="svc-h">Photography for <em>every chapter.</em></h2>
+    <div class="svc-list">
+      <article class="svc rv"><span class="n">01</span><h3>Wedding Photography</h3><p>Full-day coverage that follows the story of your celebration, from quiet preparations to the final dance.</p></article>
+      <article class="svc rv"><span class="n">02</span><h3>Pre-Wedding Photography</h3><p>Relaxed, location-based sessions that capture who you are as a couple before the big day.</p></article>
+      <article class="svc rv"><span class="n">03</span><h3>Event Photography</h3><p>Engagements, receptions, milestone celebrations and gatherings, documented with an unobtrusive eye.</p></article>
+      <article class="svc rv"><span class="n">04</span><h3>Couple &amp; Portrait Photography</h3><p>Personal portrait and couple sessions with gentle direction and timeless, natural results.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div class="about-img rv"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1000&q=75" alt="Photographer's camera and lens (placeholder image)"></div>
+    <div class="about-copy rv">
+      <span class="eyebrow">About</span>
+      <h2 class="h2" id="about-h">Photography with <em>a personal touch.</em></h2>
+      <p>This space is for the photographer's own introduction: who they are, how they approach a shoot, and what clients can expect when they work together.</p>
+      <p>Replace this placeholder with a short, honest story in the photographer's own voice — their style, their process and what they love about telling stories through images.</p>
+      <span class="note">Placeholder copy — to be replaced</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <span class="eyebrow rv">Why Choose Us</span>
+    <h2 class="h2 rv" id="why-h">The way we <em>work.</em></h2>
+    <div class="why-grid">
+      <div class="why-item rv"><h3>Personalised Photography</h3><p>Every shoot is planned around your story, your people and your preferences.</p></div>
+      <div class="why-item rv"><h3>Professional Editing</h3><p>Carefully colour-graded, consistent images that feel refined and timeless.</p></div>
+      <div class="why-item rv"><h3>Natural Storytelling</h3><p>Candid, unforced moments captured as they happen, not stiff, over-posed frames.</p></div>
+      <div class="why-item rv"><h3>Easy Enquiry</h3><p>Message on WhatsApp or send the form below and get a simple, clear reply.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages" aria-labelledby="pk-h">
+  <div class="wrap">
+    <span class="eyebrow rv">Packages</span>
+    <h2 class="h2 rv" id="pk-h">Find the <em>right fit.</em></h2>
+    <div class="pk-grid">
+      <article class="pk rv">
+        <h3>Wedding Package</h3>
+        <ul><li>Package details placeholder</li><li>Coverage hours placeholder</li><li>Deliverables placeholder</li></ul>
+        <p class="price">Contact for pricing</p>
+        <a class="btn btn-dark" data-wa data-msg="Hello! I'd like to know more about the Wedding Package." href="https://wa.me/910000000000" target="_blank" rel="noopener">Enquire</a>
+      </article>
+      <article class="pk rv">
+        <h3>Pre-Wedding Package</h3>
+        <ul><li>Package details placeholder</li><li>Session length placeholder</li><li>Deliverables placeholder</li></ul>
+        <p class="price">Contact for pricing</p>
+        <a class="btn btn-dark" data-wa data-msg="Hello! I'd like to know more about the Pre-Wedding Package." href="https://wa.me/910000000000" target="_blank" rel="noopener">Enquire</a>
+      </article>
+      <article class="pk rv">
+        <h3>Event Package</h3>
+        <ul><li>Package details placeholder</li><li>Coverage hours placeholder</li><li>Deliverables placeholder</li></ul>
+        <p class="price">Contact for pricing</p>
+        <a class="btn btn-dark" data-wa data-msg="Hello! I'd like to know more about the Event Package." href="https://wa.me/910000000000" target="_blank" rel="noopener">Enquire</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS PLACEHOLDER -->
+<section class="testi" aria-labelledby="t-h">
+  <div class="wrap">
+    <div class="testi-box rv">
+      <span class="tag">Demo placeholder</span>
+      <h2 id="t-h">Client reviews will appear here.</h2>
+      <p>This section is reserved for genuine reviews from the photographer's real clients. None are shown in this concept demo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-labelledby="c-h">
+  <div class="wrap">
+    <span class="eyebrow rv">Contact</span>
+    <h2 class="h2 rv" id="c-h">Let's talk about <em>your story.</em></h2>
+    <div class="c-grid">
+      <div class="rv">
+        <a class="btn btn-solid" data-wa href="https://wa.me/910000000000" target="_blank" rel="noopener">Message on WhatsApp</a>
+        <ul class="c-list">
+          <li><span>Phone</span><a href="tel:+910000000000">+91 00000 00000</a></li>
+          <li><span>Email</span><a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li><span>Instagram</span><a href="https://instagram.com/" target="_blank" rel="noopener">@yourstudio</a></li>
+          <li><span>Location</span><span style="width:auto;color:inherit;letter-spacing:0;text-transform:none;font-size:.95rem;padding:0" data-city>Your City</span></li>
+        </ul>
+      </div>
+      <form id="enquiry" novalidate>
+        <div class="f-row">
+          <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div><label for="f-date">Event date</label><input id="f-date" name="date" type="date"></div>
+        </div>
+        <div>
+          <label for="f-type">Type of shoot</label>
+          <select id="f-type" name="type">
+            <option>Wedding</option><option>Pre-Wedding</option><option>Event</option><option>Couple / Portrait</option>
+          </select>
+        </div>
+        <div><label for="f-msg">Message</label><textarea id="f-msg" name="msg" placeholder="Tell us a little about what you have in mind"></textarea></div>
+        <p class="err" id="f-err" role="alert"></p>
+        <button class="btn btn-solid" type="submit">Send via WhatsApp</button>
+        <p class="form-note">This demo form opens WhatsApp with your message pre-filled.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a href="#home" class="logo" data-brand>Studio Name</a>
+        <p>Wedding, pre-wedding, event and portrait photography in <span data-city>Your City</span>.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h4>Navigate</h4>
+        <ul><li><a href="#home">Home</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
+      </nav>
+      <div>
+        <h4>Follow</h4>
+        <ul><li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li><li><a data-wa href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="mailto:hello@example.com">Email</a></li></ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; <span id="yr">2026</span> <span data-brand>Studio Name</span>. All rights reserved.</span>
+      <span>Concept demo — placeholder content &amp; images.</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Photo viewer">
+  <div class="lb-in"><img id="lb-img" alt=""></div>
+  <button class="lb-btn lb-x" id="lb-x" aria-label="Close">&times;</button>
+  <button class="lb-btn lb-p" id="lb-p" aria-label="Previous photo">&#8592;</button>
+  <button class="lb-btn lb-n" id="lb-n" aria-label="Next photo">&#8594;</button>
+  <div class="lb-cap" id="lb-cap"></div>
+</dialog>
+
+<script>
+/* =====================================================
+   CUSTOMISE: change these once, they update across the page
+   ===================================================== */
+const CONFIG = {
+  name: "Studio Name",
+  city: "Your City",
+  whatsapp: "910000000000",   // country code + number, digits only
+  defaultMessage: "Hello! I found your website and would like to enquire about a photography session."
+};
+
+(function(){
+  document.body.classList.remove('no-js');
+  const $ = (s, c=document) => c.querySelector(s);
+  const $$ = (s, c=document) => [...c.querySelectorAll(s)];
+  const waLink = msg => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+
+  // Apply config
+  $$('[data-brand]').forEach(e => e.textContent = CONFIG.name);
+  $$('[data-city]').forEach(e => e.textContent = CONFIG.city);
+  $$('[data-wa]').forEach(a => a.href = waLink(a.dataset.msg || CONFIG.defaultMessage));
+  $('#yr').textContent = new Date().getFullYear();
+
+  // Sticky nav
+  const nav = $('#nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // Mobile menu
+  const burger = $('#burger'), menu = $('#menu');
+  const setMenu = open => {
+    menu.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  $$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') setMenu(false); });
+  window.matchMedia('(min-width:861px)').addEventListener('change', () => setMenu(false));
+
+  // Scroll reveal
+  const rv = $$('.rv');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    }), {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+    rv.forEach((el,i) => { el.style.transitionDelay = (i % 3) * 90 + 'ms'; io.observe(el); });
+  } else rv.forEach(el => el.classList.add('in'));
+
+  // Image failure fallback (keeps layout intact if a photo can't load)
+  $$('.shot img').forEach(img => img.addEventListener('error', () => img.closest('.shot').classList.add('failed')));
+  const heroImg = $('.hero-img');
+  heroImg.addEventListener('error', () => heroImg.style.display = 'none');
+
+  // Lightbox
+  const lb = $('#lb'), lbImg = $('#lb-img'), lbCap = $('#lb-cap');
+  const shots = $$('.shot'); let cur = 0, opener = null;
+  const show = i => {
+    cur = (i + shots.length) % shots.length;
+    const img = $('img', shots[cur]);
+    lbImg.src = img.src.replace('w=900','w=1800');
+    lbImg.alt = img.alt;
+    lbCap.textContent = shots[cur].dataset.cat + '  ·  ' + (cur+1) + ' / ' + shots.length;
+  };
+  shots.forEach((s,i) => s.addEventListener('click', () => {
+    if(s.classList.contains('failed')) return;
+    opener = s; show(i); lb.showModal();
+  }));
+  $('#lb-x').addEventListener('click', () => lb.close());
+  $('#lb-p').addEventListener('click', () => show(cur-1));
+  $('#lb-n').addEventListener('click', () => show(cur+1));
+  lb.addEventListener('click', e => { if(e.target === lb || e.target.classList.contains('lb-in')) lb.close(); });
+  lb.addEventListener('close', () => opener && opener.focus());
+  lb.addEventListener('keydown', e => {
+    if(e.key === 'ArrowLeft') show(cur-1);
+    if(e.key === 'ArrowRight') show(cur+1);
+  });
+
+  // Enquiry form -> WhatsApp
+  const form = $('#enquiry'), err = $('#f-err');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const f = form.elements, name = f['name'].value.trim();
+    if(!name){ err.textContent = 'Please enter your name.'; f['name'].focus(); return; }
+    err.textContent = '';
+    const parts = [`Hello! My name is ${name}.`, `I'm enquiring about: ${f['type'].value}.`];
+    if(f['date'].value) parts.push(`Date: ${f['date'].value}.`);
+    if(f['msg'].value.trim()) parts.push(f['msg'].value.trim());
+    window.open(waLink(parts.join(' ')), '_blank', 'noopener');
+  });
+})();
+</script>
+</body>
+</html>
