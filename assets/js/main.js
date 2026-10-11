@@ -1,7 +1,7 @@
 
 const CONTACT = {
   email: "anshgamerlion@gmail.com",
-  instagram: "https://instagram.com/aruj.voidwalker",
+  instagram: "https://instagram.com/aruj_dev",
   whatsapp: "918448688820"
 };
 
